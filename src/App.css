@@ -1,0 +1,165 @@
+.App {
+  text-align: center;
+}
+
+body, html{
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+  width : 1100x;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cv{
+  background-color: #d6d6d6;
+  max-width: 100%;
+}
+
+.header{
+  background-color: #d6d6d6;
+  max-width: 100%;
+}
+
+#Logo{
+  width: 90%;
+  height: 'auto';
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-left: 10px;
+}
+
+#cv{
+  width: 85%;
+  height: 'auto';
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+  margin-left: 10px;
+}
+
+.applications{
+  width: 100vw;
+  height: 60px;
+  background-color: #d6d6d6;
+  display: table; 
+  max-width: 100%;
+  border:#cccccc solid 1px;
+}
+
+.text{
+  text-align:center; 
+  vertical-align: middle;
+  display: table-cell;
+  background-color: #d6d6d6;
+}
+
+#link{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #9e9e9e;
+  font-size: 0.8em;
+}
+
+#image{
+  height: 'auto';
+  width: 200px;
+}
+
+#imagenew{
+  height: 'auto';
+  width: 1000px;
+  padding: 40px;
+}
+
+#footerImage{
+  height: 100px;
+  width: auto;
+  margin: 20px;
+}
+
+#footer{
+  display: 'inline-flex';
+  background-color: #d6d6d6;
+}
+
+.applications{
+  display: inline-block;
+  background-color: #d6d6d6;
+}
+
+#apps{
+  background-color: #d6d6d6;
+  padding: 15px;
+}
+
+#linkimage1{
+  height: 55px;
+  width: auto;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+
+#linkimage2{
+  height: 70px;
+  width: auto;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+
+#linkimage3{
+  height: 57px;
+  width: auto;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+
+#linkimage4{
+  height: 50px;
+  width: auto;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 0px;
+}

@@ -1,0 +1,50 @@
+Describes what concurrency is and briefly describes various methods of implementing concurrency? 
+
+Concurrency is when multiple things are happening at the same time, this could could be multiple executions of code, computations or more than one application running on your PC at the same time.
+
+Multi-process: 
+
+Is a system that has more than on processing unit. If a system needs to increase its computational performance more then more cores will be added to the CPU. Each core acts as a mini CPU with its own memory and set of registers. And when one or more cores have nothing to process, the task will be divided equally amongst the total sum of cores, this prevents cores from idling(This is known as preforking, basically forking the processing power of the CPU). 
+
+This will improve the speed and efficiency of the computer.
+
+Multi-threading: 
+
+When executing code, multi-threading allows a single process to have multiple code threads. Each thread can execute independently but concurrently sharing the same resources. This makes it possible to implement mutual features for all requests. Multi-threaded applications have two or more threads that run at the same time
+
+
+ Describes how concurrency is implemented with Node.js?
+
+Node.js is a asynchronous event-driven design system - processes execute sequentially within a program. If two functions are closely related(e.g async-await or callbacks), the server will move the second function so that it doesn't wait until the first function has finished to start its execution. This is a direct result of the single-threaded event loop being the backbone of a Node. 
+
+ 
+
+What role does asynchronous programming play in concurrency?
+
+The nature of JavaScript asynchronous programming and concurrency overlap                   mechanically, asynchronous programming uses callbacks which enables processes to be executed at the same time.  Callbacks allow us to do two things at once to avoid unnecessary threads.   
+
+        
+
+How are web APIs related to implementing concurrency?
+
+Web APIs are inherently concurrent, they allow multiple users to make a request and receive a response at the same time. APIs would prove to be useless if the didn't allow more than one data fetch simultaneously. One way this can become problematic is when you're able to manipulate the content of the data that the API provides, this happens when two or more users access a particular value at the same time and try to change it, this can cause a lot of confusion once they finish the change. the last person to make the change will override the prior iterations. One way to work around this is to lock the value when its being edited and unlock it once the change has been made.
+
+ 
+
+What is the event-loop in JavaScript and how does it relate to concurrency? 
+
+ This is the legendary secret behind JavaScript becoming concurrent. The functions are added to a stack(The call stack) and are executed from top to bottom by your interpreter. JavaScript uses a single call stack meaning it can only do one process at a time. Inadvertently, this results in a slow process mechanically, which isn't particularly favorable. This is when Callbacks were introduced, their intrinsic non-blocking nature allows for concurrent behavior.
+
+ When the block encounters a callback, it is immediately sent to a API and is no longer your interpreters responsibility. Now the stack can continue parsing your block of code whilst the API handles your callback functions. When the callback has been processed it is sent to the task queue, and when the stack becomes vacant, the function will be pushed back into the stack where it will be processed. This is how JavaScript, a single-threaded program becomes multi-threaded.
+
+This is how JavaScript relates to concurrency, the event loop is responsible for executing the code, collecting and processing call backs, and then executing the queued  tasks. This enables functions to be processed at the same time and doesn't halt computational momentum.
+
+  
+
+Compare the way Oracle and MongoDB support database concurrency?
+
+Oracle
+
+MongoDB and Oracle uses a locking system which allows users to read and write files concurrently. This means that one person will have the exclusive right to a resource and this means they are able to read and manipulate the document, the user that is granted permission will lock the document allowing other uses to read the file but disallow manipulation(document writing), the next user will have the permission to read and write once the first user finishes changing the document and unlocks it. 
+
+MongoDB and Oracle encourage data concurrency meaning that many users can access data at the same time. The consistency of this data is what's important, this means when someone is reading, writing or transacting documents, everyone who enters the database must see the same data.
